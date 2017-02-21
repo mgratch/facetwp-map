@@ -337,9 +337,9 @@ class FWP_Map{
 			$assets['markerclusterer.js'] = FWP_MAP_URL . 'assets/js/markerclusterer.js';
 		}
 		// add front styles
-		$assets['fwpm-front.css'] = FWP_MAP_URL . 'assets/css/front.min.css';
+		$assets['fwpm-front.css'] = FWP_MAP_URL . 'assets/css/front' . FWP_MAP_ASSET_DEBUG . '.css';
 		// add front js
-		$assets['fwpm-front.js'] = FWP_MAP_URL . 'assets/js/front.min.js';
+		$assets['fwpm-front.js'] = FWP_MAP_URL . 'assets/js/front' . FWP_MAP_ASSET_DEBUG . '.js';
 
 		return $assets;
 
