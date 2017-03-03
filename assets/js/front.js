@@ -33,7 +33,21 @@ function facetwpMapInit() {
         });
     }
 
-    facetwp_map.fitBounds(bounds);
+    //if lat/lng defaults are set set the map center when no markers exist
+    if (
+        'undefined' !== typeof FWP.settings.map.config.default_location_lat &&
+        'undefined' !== typeof FWP.settings.map.config.default_location_lng &&
+        0 === facetwp_markers.length
+    ) {
+        facetwp_map.setCenter(
+            {
+                lat: parseFloat(FWP.settings.map.config.default_location_lat),
+                lng: parseFloat(FWP.settings.map.config.default_location_lng)
+            }
+        );
+    } else {
+        facetwp_map.fitBounds(bounds);
+    }
 
     // set options
     facetwp_map.setOptions(FWP.settings.map.init);

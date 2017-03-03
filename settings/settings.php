@@ -80,6 +80,32 @@ $settings = array(
                         ),
                     ),
                 ),
+                array(
+                    'column' => array(
+                        array(
+                            'size'    => 'col-sm-6',
+                            'control' => array(
+                                'default_location_lat' => array(
+                                    'label'       => __( 'Default Latitude', 'facetwp' ),
+                                    'type'        => 'number',
+                                    'attributes'  => array( 'step' => 'any' ),
+                                    'value'       => '',
+                                ),
+                            ),
+                        ),
+                        array(
+                            'size'    => 'col-sm-6',
+                            'control' => array(
+                                'default_location_lng' => array(
+                                    'label'       => __( 'Default Longitude', 'facetwp' ),
+                                    'type'        => 'number',
+                                    'attributes'  => array( 'step' => 'any' ),
+                                    'value'       => '',
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
             ),
         ),
     ),
